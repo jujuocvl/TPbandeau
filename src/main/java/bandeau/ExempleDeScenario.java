@@ -28,14 +28,16 @@ public class ExempleDeScenario {
         s.addEffect(new Rotate("2 tours à droite", 180, 4000, true), 2);
         
         // On cree les bandeaux
-        Bandeau b1 = new Bandeau();
-        //Bandeau b2 = new Bandeau();
-        //Bandeau b3 = new Bandeau();
+        BandeauVerrouillable b1 = new BandeauVerrouillable();
+        BandeauVerrouillable b2 = new BandeauVerrouillable();
+        BandeauVerrouillable b3 = new BandeauVerrouillable();
+
         System.out.println("CTRL+C pour terminer le programme");
         // On doit jouer le scénario en même temps sur plusieurs bandeaux :
         s.playOn(b1);
-        //s.playOn(b2);
-        
+        s.playOn(b2);
+        s.playOn(b3);
+
         // On ne doit pas pouvoir changer un scénario quand il est en train de se jouer
         try {
             Thread.sleep(10000);
